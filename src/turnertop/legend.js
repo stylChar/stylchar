@@ -1,30 +1,23 @@
 import React from 'react';
+import { useState } from 'react';
 
 
 
-
-function Legend() {
+export default function Legend() {
+  const [godmode, setGodmode] = useState(false)
+if (godmode === false)
   return (
-  console.log("sex feels good")
-  <div>testing shit with github branch merging</div>
+  <>
+  <div>I am on my come-up to destroy my enemies. Right now, I haven't ascended to god mode.</div>
 
-
-
-
-  )
-
-
-
+  <button onClick={()=> setGodmode(true)}>
+    Activate Godmode
+  </button>
+  </>
+  ); else if (godmode === true)
+    return (
+    <>
+    I AM A GOD!!!
+    </>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-export default Legend;
